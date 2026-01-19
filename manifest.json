@@ -1,0 +1,16 @@
+{
+    "name": "Resurse Personale",
+    "short_name": "Resurse",
+    "description": "Lista mea de resurse și notițe.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#fcfcfc",
+    "theme_color": "#fcfcfc",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

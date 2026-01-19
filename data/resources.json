@@ -1,0 +1,64 @@
+{
+  "site": {
+    "title": "Resurse",
+    "subtitle": "(lista mea)",
+    "footerNote": "Ovidiu Chis. Notițe personale."
+  },
+  "sections": [
+    {
+      "id": "ucenicie",
+      "label": "Ucenicie"
+    },
+    {
+      "id": "carti",
+      "label": "Cărți"
+    }
+  ],
+  "items": [
+    {
+      "id": "amos-discutii",
+      "title": "Întrebări Amos 1-5",
+      "note": "Întrebări de discuții în grup mic.",
+      "sectionId": "ucenicie",
+      "type": "page",
+      "pagePath": "data/pages/amos-discutii.json",
+      "pinned": true
+    },
+    {
+      "id": "tds",
+      "title": "Daruri spirituale",
+      "note": "Test interactiv pentru descoperirea darurilor spirituale",
+      "sectionId": "ucenicie",
+      "type": "external",
+      "url": "https://tds.ochis.ro/",
+      "pinned": false
+    },
+    {
+      "id": "m8",
+      "title": "Marcu - 8 săptămâni",
+      "note": "Citește împreună cu cineva Evanghelia după Marcu în 8 săptămâni și descoperă-L pe Isus așa cum este prezentat de ucenicul Său.",
+      "sectionId": "ucenicie",
+      "type": "external",
+      "url": "https://uncuvant.ro/marcu-8sapt.html",
+      "pinned": false
+    },
+    {
+      "id": "magna-mentorat",
+      "title": "Seria de ghiduri Metorat",
+      "note": "O serie de ghiduri de studiu, extraordinare, potrivite pentru a învăța și a crește.",
+      "sectionId": "carti",
+      "type": "external",
+      "url": "https://www.magnagratia.org/serii/proiectul-mentorat/",
+      "pinned": false
+    },
+    {
+      "id": "9marks-zbs",
+      "title": "9Marks - Zidind biserici sănătoase",
+      "note": "Serie de cărți esențiale pentru sănătatea bisericii.",
+      "sectionId": "carti",
+      "type": "external",
+      "url": "https://www.magnagratia.org/serii/seria-9marks-zidind-biserici-sanatoase/",
+      "pinned": false
+    }
+  ]
+}
