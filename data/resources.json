@@ -59,6 +59,15 @@
       "type": "external",
       "url": "https://www.magnagratia.org/serii/seria-9marks-zidind-biserici-sanatoase/",
       "pinned": false
+    },
+    {
+      "id": "exemplu-formatare",
+      "title": "Demo Formatare",
+      "note": "Pagină tehnică ce arată toate stilurile.",
+      "sectionId": "carti",
+      "type": "page",
+      "pagePath": "data/pages/example.json",
+      "pinned": false
     }
   ]
 }

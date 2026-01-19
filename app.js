@@ -162,12 +162,25 @@ async function renderPage(container, id) {
     const blocks = note.contentBlocks || []; // Support both minimal "blocks" or previous schema
     
     // Quick renderer for blocks
+    const parseRichText = (text) => {
+      if (!text) return '';
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') // Bold
+        .replace(/\*(.*?)\*/g, '<i>$1</i>')     // Italic
+        .replace(/==(\w+):(.*?)==/g, '<mark style="background-color:$1; color:inherit;">$2</mark>') // Highlight with color ==red:text==
+        .replace(/==(.*?)==/g, '<mark>$1</mark>') // Highlight default ==text==
+        .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" style="color:var(--link-color); text-decoration:underline;">$1</a>'); // Link
+    };
+
     const html = blocks.map(b => {
-      if (b.type === 'h2' || b.type === 'heading') return `<h2>${b.text}</h2>`;
-      if (b.type === 'p' || b.type === 'paragraph') return `<p>${b.text}</p>`;
-      if (b.type === 'ul' || b.type === 'list') return `<ul>${(b.items||[]).map(li=>`<li>${li}</li>`).join('')}</ul>`;
-      if (b.type === 'quote') return `<blockquote class="block-quote">${b.text}</blockquote>`;
-      if (b.type === 'scripture') return `<div class="block-scripture"><span class="scripture-text">${b.text}</span><span class="scripture-ref">${b.reference}</span></div>`;
+      // Apply parsing to text fields
+      const text = b.text ? parseRichText(b.text) : '';
+      
+      if (b.type === 'h2' || b.type === 'heading') return `<h2>${text}</h2>`;
+      if (b.type === 'p' || b.type === 'paragraph') return `<p>${text}</p>`;
+      if (b.type === 'ul' || b.type === 'list') return `<ul>${(b.items||[]).map(li=>`<li>${parseRichText(li)}</li>`).join('')}</ul>`;
+      if (b.type === 'quote') return `<blockquote class="block-quote">${text}</blockquote>`;
+      if (b.type === 'scripture') return `<div class="block-scripture"><span class="scripture-text">${text}</span><span class="scripture-ref">${b.reference}</span></div>`;
       if (b.type === 'divider') return `<hr style="border:0; border-top:1px solid #eee; margin:2rem 0">`;
       return '';
     }).join('');
