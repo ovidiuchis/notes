@@ -187,7 +187,7 @@ async function renderPage(container, id) {
 
     container.innerHTML = `
       <div class="note-view">
-        <div class="note-nav"><a href="#/">← Lista mea</a></div>
+        <div class="note-nav"><a href="#/">← Înapoi</a></div>
         <h1 class="note-title">${note.title}</h1>
         <div class="note-content">${html}</div>
       </div>

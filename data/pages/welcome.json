@@ -3,15 +3,16 @@
     "contentBlocks": [
         {
             "type": "p",
-            "text": "O colecție personală de resurse utile"
+            "text": "O colecție personală de resurse utile și valoroase, pe care le folosesc și pe care adesea am fost nevoit să le caut pentru a le trimite și altora"
+        },
+        {
+            "type": "scripture",
+            "text": "Tot ceea ce găsește mâna ta să facă, fă cu toată puterea ta.",
+            "reference": "Eclesiastul 9:10a"
         },
         {
             "type": "p",
-            "text": "Resurse valoroase, pe care le folosesc și pe care adesea am fost nevoit să le caut pentru a le trimite și altora"
-        },
-        {
-            "type": "quote",
-            "text": "Tot ceea ce găsește mâna ta să facă, fă cu toată puterea ta. Ecl. 9:10a"
+            "text": "Ovidiu"
         }
     ]
 }
