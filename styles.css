@@ -290,3 +290,80 @@ a { color: inherit; text-decoration: none; }
     padding: 0.75rem 0.5rem; /* Larger touch target vertical */
   }
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --text-light: #666;
+    /* --accent-color: #eee; */
+  }
+
+  body {
+    background-color: var(--bg-color);
+  }
+
+  /* Specific Overrides for Dark Mode */
+  .resource-item:hover {
+    background-color: #1e1e1e;
+  }
+  
+  .about-link {
+    background-color: #1e1e1e;
+    color: #bbb;
+    border-color: #333;
+  }
+  .about-link::before {
+    background: #333;
+    color: #ccc;
+  }
+  
+  .search-input {
+    border-bottom-color: #333;
+  }
+  .search-input:focus {
+    border-bottom-color: #555;
+  }
+  
+  .group-title {
+    color: #888;
+    border-bottom-color: #333;
+  }
+
+  .note-title {
+    color: #e0e0e0;
+  }
+  
+  .note-content .block-quote {
+    border-left-color: #333;
+    color: #888;
+  }
+  
+  .note-content .block-scripture {
+    background: #181818;
+    border-color: #333;
+  }
+  .scripture-text {
+    color: #ddd;
+  }
+  
+  .app-host-container {
+    background: #1e1e1e;
+    border-color: #333;
+  }
+  
+  .site-footer {
+    border-top-color: #333;
+    color: #555;
+  }
+  
+  /* Link color in dark mode */
+  a {
+    color: inherit;
+  }
+  .note-content a {
+    color: #8ab4f8; /* Softer blue for dark mode links */
+  }
+}
