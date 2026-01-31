@@ -27,16 +27,6 @@ async function init() {
 
     state.data = data;
 
-    // Update Site Meta
-    if (state.data.site) {
-      if (state.data.site.title)
-        $(".site-title").innerHTML =
-          state.data.site.title +
-          ` <span class="site-subtitle">${state.data.site.subtitle || ""}</span>`;
-      if (state.data.site.footerNote)
-        $("#footer-note").textContent = state.data.site.footerNote;
-    }
-
     setupRouter();
     render();
   } catch (e) {
