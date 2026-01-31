@@ -134,12 +134,22 @@ function renderGroup(section, items) {
             icon = '⏱';
           }
 
+          // Icon classes for different types
+          let iconClass = 'meta-icon meta-external';
+          if (item.type === 'page') {
+            iconClass = 'meta-icon meta-page';
+          } else if (item.type === 'tool') {
+            iconClass = 'meta-icon meta-tool';
+          }
+
           return `
             <li>
               <a href="${href}" target="${target}" class="resource-item">
                 <div class="item-row">
                   <span class="item-title">${item.title}</span>
-                  <span class="item-meta">${icon}</span>
+                  <span class="item-meta">
+                    <span class="${iconClass}" title="${item.type === 'page' ? 'Pagină internă' : item.type === 'tool' ? 'Instrument' : 'Link extern'}">${icon}</span>
+                  </span>
                 </div>
                 ${item.note ? `<span class="item-note">${item.note}</span>` : ''}
               </a>
