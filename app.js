@@ -222,6 +222,8 @@ function renderPageContent(container, note) {
         return `<blockquote class="block-quote">${text}</blockquote>`;
       if (b.type === "scripture")
         return `<div class="block-scripture"><span class="scripture-text">${text}</span><span class="scripture-ref">${b.reference}</span></div>`;
+      if (b.type === "callout")
+        return `<div class="block-callout">${text}</div>`;
       if (b.type === "divider")
         return `<hr style="border:0; border-top:1px solid #eee; margin:2rem 0">`;
       return "";

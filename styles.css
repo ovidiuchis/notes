@@ -344,6 +344,16 @@ a {
   text-transform: uppercase;
 }
 
+.note-content .block-callout {
+  background: #fffbeb;
+  border-left: 3px solid #f59e0b;
+  padding: 1rem 1.25rem;
+  border-radius: 0 4px 4px 0;
+  margin: 1.5rem 0;
+  font-weight: 500;
+  color: #92400e;
+}
+
 /* Micro App Host */
 .app-host-header {
   display: flex;
@@ -452,6 +462,12 @@ a {
   }
   .scripture-text {
     color: #ddd;
+  }
+
+  .note-content .block-callout {
+    background: #1f1a0f;
+    border-left-color: #b45309;
+    color: #fbbf24;
   }
 
   .app-host-container {
