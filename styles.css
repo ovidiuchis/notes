@@ -324,24 +324,58 @@ a {
   margin: 1.5rem 0;
 }
 .note-content .block-scripture {
-  background: #fdfdfd;
-  border: 1px solid #eee;
-  padding: 1rem;
-  border-radius: 4px;
-  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #fdfbf7 0%, #f8f6f2 100%);
+  border: 1px solid #e8e5df;
+  border-left: 4px solid #c9a961;
+  padding: 1.75rem 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(201, 169, 97, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.note-content .block-scripture::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  color: rgba(201, 169, 97, 0.1);
+  line-height: 1;
+  pointer-events: none;
+}
+.note-content .block-scripture:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.15);
+  border-left-color: #d4b76a;
 }
 .scripture-text {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  color: #222;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #2c2416;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
 }
 .scripture-ref {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.75rem;
+  color: #8b7a5a;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(201, 169, 97, 0.1);
+  border-radius: 4px;
 }
 
 .note-content .block-callout {
@@ -457,11 +491,24 @@ a {
   }
 
   .note-content .block-scripture {
-    background: #181818;
-    border-color: #333;
+    background: linear-gradient(135deg, #1a1714 0%, #221f1a 100%);
+    border-color: #3a3528;
+    border-left-color: #9d864f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  .note-content .block-scripture::before {
+    color: rgba(157, 134, 79, 0.08);
+  }
+  .note-content .block-scripture:hover {
+    box-shadow: 0 4px 16px rgba(157, 134, 79, 0.2);
+    border-left-color: #b39a5e;
   }
   .scripture-text {
-    color: #ddd;
+    color: #e8dcc8;
+  }
+  .scripture-ref {
+    color: #b39a5e;
+    background: rgba(157, 134, 79, 0.15);
   }
 
   .note-content .block-callout {
