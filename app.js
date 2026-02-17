@@ -183,13 +183,17 @@ async function renderPage(container, id) {
 
     if (error || !data) throw new Error("Not found");
 
-    renderPageContent(container, data);
+    // Find the item's note (subtitle) from the list data
+    const item = state.data?.items?.find((i) => i.id === id);
+    const itemNote = item?.note || null;
+
+    renderPageContent(container, data, itemNote);
   } catch (e) {
     container.innerHTML = `<p>Nota nu a fost găsită.</p><a href="#/">Înapoi</a>`;
   }
 }
 
-function renderPageContent(container, note) {
+function renderPageContent(container, note, itemNote) {
   const blocks = note.contentBlocks || [];
 
   // Quick renderer for blocks
@@ -234,6 +238,7 @@ function renderPageContent(container, note) {
     <div class="note-view">
       <div class="note-nav"><a href="#/">← Înapoi</a></div>
       <h1 class="note-title">${note.title}</h1>
+      ${itemNote ? `<div class="note-subtitle">${itemNote}</div>` : ""}
       <div class="note-content">${html}</div>
     </div>
   `;

@@ -300,6 +300,17 @@ a {
   color: #000;
 }
 
+.note-subtitle {
+  background-color: #f5f5f5;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-top: -0.75rem;
+  margin-bottom: 1.25rem;
+}
+
 .note-content p {
   margin-bottom: 0.75rem;
   text-align: justify;
